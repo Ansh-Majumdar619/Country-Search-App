@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: rgb(24, 51, 204);
+  margin: 0;
+  background: url("background-image.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: #FCCC74;
+  width: 75vw;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+  display: grid;
+  grid-template-columns: 9fr 9fr;
+  gap: 15px;
+}
+
+.search-box input {
+  font-family: "Oswald", sans-serif ;
+  font-size: 18px;
+  border: 2px solid #383cc1;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  outline: 0;
+  padding: 15px;
+}
+
+.search-box button {
+  background-color: #383cc1;
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #da8d00;
+  transform: scale(1.05); 
+}
+
+#search_result {
+  text-align: left;
+  display: none;
+  margin-top: 20px;
+}
+
+#search_result img{
+width: 200px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input, .search-box button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #search_result img {
+    max-width: 100%;
+  }
+}
